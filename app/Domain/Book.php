@@ -19,6 +19,7 @@ final class Book
         public string $categoryId,
         public int $totalCopies,
         public int $availableCopies,
+        public ?string $coverKey = null,
     ) {
         $title = trim($title);
         if ($title === '') {
