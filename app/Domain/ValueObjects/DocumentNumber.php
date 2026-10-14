@@ -6,7 +6,9 @@ namespace App\Domain\ValueObjects;
 // pero plan D-07 lo exige y member.document_number es único (HU-05.1).
 final readonly class DocumentNumber
 {
-    public function __construct(public string $value)
+    public string $value;
+
+    public function __construct(string $value)
     {
         $v = trim($value);
         if ($v === '' || mb_strlen($v) > 30) {
